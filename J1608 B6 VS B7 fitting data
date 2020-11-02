@@ -1,0 +1,135 @@
+#################### B6 ###################
+
+parameter names: ['gauss_amp', 'gauss_r0', 'gauss_x0', 'gauss_y0', 'gauss_fwhm', 'gauss_theta', 'gauss_i']
+independent variables: ['x', 'y']
+[[Model]]
+    Model(gaussian_ring_1, prefix='gauss_')
+[[Fit Statistics]]
+    # fitting method   = least_squares
+    # function evals   = 10
+    # data points      = 10201
+    # variables        = 7
+    chi-square         = 4.2567e-04
+    reduced chi-square = 4.1757e-08
+    Akaike info crit   = -173322.232
+    Bayesian info crit = -173271.620
+[[Variables]]
+    gauss_amp:    0.00557345 +/- 1.9788e-05 (0.36%) (init = 0.006)
+    gauss_r0:     7.16940896 +/- 0.03675103 (0.51%) (init = 7)
+    gauss_x0:     50.0186299 +/- 0.02813288 (0.06%) (init = 50)
+    gauss_y0:     50.3138778 +/- 0.01411425 (0.03%) (init = 50)
+    gauss_fwhm:   12.0482383 +/- 0.07117318 (0.59%) (init = 12)
+    gauss_theta:  71.9519534 +/- 0.11968106 (0.17%) (init = 70)
+    gauss_i:      67.1921206 +/- 0.11031950 (0.16%) (init = 60)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(gauss_x0, gauss_y0)    =  0.542
+    C(gauss_r0, gauss_i)     =  0.447
+    C(gauss_r0, gauss_fwhm)  = -0.399
+    C(gauss_fwhm, gauss_i)   =  0.387
+    C(gauss_amp, gauss_fwhm) = -0.326
+
+#################### B7 ###################
+parameter names: ['gauss_amp', 'gauss_r0', 'gauss_x0', 'gauss_y0', 'gauss_fwhm', 'gauss_theta', 'gauss_i']
+independent variables: ['x', 'y']
+[[Model]]
+    Model(gaussian_ring_1, prefix='gauss_')
+[[Fit Statistics]]
+    # fitting method   = least_squares
+    # function evals   = 10
+    # data points      = 17161
+    # variables        = 7
+    chi-square         = 0.00530927
+    reduced chi-square = 3.0951e-07
+    Akaike info crit   = -257207.013
+    Bayesian info crit = -257152.760
+[[Variables]]
+    gauss_amp:    0.02682991 +/- 7.4544e-05 (0.28%) (init = 0.01)
+    gauss_r0:     4.64939987 +/- 0.02733274 (0.59%) (init = 4)
+    gauss_x0:     78.6327365 +/- 0.01774311 (0.02%) (init = 78)
+    gauss_y0:     70.0969264 +/- 0.00868775 (0.01%) (init = 71)
+    gauss_fwhm:   10.1433014 +/- 0.05065879 (0.50%) (init = 10)
+    gauss_theta:  72.9800989 +/- 0.09609612 (0.13%) (init = 72)
+    gauss_i:      67.5779545 +/- 0.08884793 (0.13%) (init = 60)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(gauss_r0, gauss_fwhm)  = -0.569
+    C(gauss_x0, gauss_y0)    =  0.536
+    C(gauss_fwhm, gauss_i)   =  0.377
+    C(gauss_r0, gauss_i)     =  0.319
+    C(gauss_amp, gauss_r0)   = -0.205
+    C(gauss_amp, gauss_fwhm) = -0.162
+
+
+    NOTES: astropy.convolue set to clean beam
+    x,y in arcsecsonds fits header
+    normalize to the maximum intensity
+    fit galario model after
+
+
+[[Model]]
+    Model(gaussian_ring_1, prefix='gauss_')
+[[Fit Statistics]]
+    # fitting method   = least_squares
+    # function evals   = 10
+    # data points      = 10201
+    # variables        = 7
+    chi-square         = 4.2567e-04
+    reduced chi-square = 4.1757e-08
+    Akaike info crit   = -173322.232
+    Bayesian info crit = -173271.620
+[[Variables]]
+    gauss_amp:    0.00557345 +/- 1.9788e-05 (0.36%) (init = 0.006)
+    gauss_r0:     0.35847045 +/- 0.00183755 (0.51%) (init = 0.35)
+    gauss_x0:     2.50093150 +/- 0.00140664 (0.06%) (init = 2.5)
+    gauss_y0:     2.51569389 +/- 7.0571e-04 (0.03%) (init = 2.5)
+    gauss_fwhm:   0.60241191 +/- 0.00355866 (0.59%) (init = 0.6)
+    gauss_theta:  71.9519534 +/- 0.11968106 (0.17%) (init = 70)
+    gauss_i:      67.1921206 +/- 0.11031950 (0.16%) (init = 60)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(gauss_x0, gauss_y0)    =  0.542
+    C(gauss_r0, gauss_i)     =  0.447
+    C(gauss_r0, gauss_fwhm)  = -0.399
+    C(gauss_fwhm, gauss_i)   =  0.387
+    C(gauss_amp, gauss_fwhm) = -0.326
+J1608_B6_robust.fits
+
+
+[[Model]]
+    Model(gaussian_ring_1, prefix='gauss_')
+[[Fit Statistics]]
+    # fitting method   = least_squares
+    # function evals   = 10
+    # data points      = 17161
+    # variables        = 7
+    chi-square         = 0.00530927
+    reduced chi-square = 3.0951e-07
+    Akaike info crit   = -257207.013
+    Bayesian info crit = -257152.760
+[[Variables]]
+    gauss_amp:    0.02682992 +/- 7.4544e-05 (0.28%) (init = 0.0088)
+    gauss_r0:     0.32545741 +/- 0.00191328 (0.59%) (init = 0.28)
+    gauss_x0:     5.50429153 +/- 0.00124201 (0.02%) (init = 5.46)
+    gauss_y0:     4.90678496 +/- 6.0814e-04 (0.01%) (init = 4.97)
+    gauss_fwhm:   0.71002904 +/- 0.00354610 (0.50%) (init = 0.7)
+    gauss_theta:  72.9801015 +/- 0.09609663 (0.13%) (init = 72)
+    gauss_i:      67.5778573 +/- 0.08884834 (0.13%) (init = 60)
+[[Correlations]] (unreported correlations are < 0.100)
+    C(gauss_r0, gauss_fwhm)  = -0.569
+    C(gauss_x0, gauss_y0)    =  0.536
+    C(gauss_fwhm, gauss_i)   =  0.377
+    C(gauss_r0, gauss_i)     =  0.319
+    C(gauss_amp, gauss_r0)   = -0.205
+    C(gauss_amp, gauss_fwhm) = -0.162
+J1608_B7_robust.fits
+
+UVPLOT download and get data
+arcsecond coridinate center
+Galario - get that working
+Convolution - logan will
+B6 Coordinates start at center for (0,0) rather than the corner now
+    gauss_amp:    0.00557348 +/- 1.9788e-05 (0.36%) (init = 0.006)
+    gauss_r0:     0.35846680 +/- 0.00183755 (0.51%) (init = 0.3)
+    gauss_x0:     9.3151e-04 +/- 0.00140664 (151.01%) (init = 0.1)
+    gauss_y0:     0.01569407 +/- 7.0571e-04 (4.50%) (init = 0.07)
+    gauss_fwhm:   0.60240892 +/- 0.00355865 (0.59%) (init = 0.6)
+    gauss_theta:  71.9519335 +/- 0.11968224 (0.17%) (init = 70)
+    gauss_i:      67.1919743 +/- 0.11032047 (0.16%) (init = 60)

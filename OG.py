@@ -119,8 +119,8 @@ Change dataname and only dataname!!!!
 
 """
 #dataname = 'J1604_uniform-1.fits'
-#dataname = 'J1608_B6_robust.fits'
-dataname = 'J1608_B7_robust.fits'
+dataname = 'J1608_B6_robust.fits'
+#dataname = 'J1608_B7_robust.fits'
 #dataname = 'LkCa15_uniform.fits'
 #dataname = 'PDS70_robust-1.fits'
 

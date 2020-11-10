@@ -16,7 +16,7 @@ Using lmfit
 def ring_gaussian(x, y, pix_size, amp, r0, x0, y0, fwhm, theta, i):
     r0 *= glr.arcsec
     x0 *= glr.arcsec
-    y0 *= glr.arcsec
+    y0 *= -1*glr.arcsec
 
     amp *= (pix_size ** 2)
 
@@ -119,7 +119,12 @@ Change dataname and only dataname!!!!
 
 """
 #dataname = 'J1604_uniform-1.fits'
-dataname = 'J1608_B6_robust.fits'
+
+dataname = 'J1604_B7_robust_-2.0.fits'
+
+#dataname = 'J1604_B3_robust_-2.fits'
+#dataname = 'J1608_B3_robust2.fits'
+#dataname = 'J1608_B6_robust2.fits'
 #dataname = 'J1608_B7_robust.fits'
 #dataname = 'LkCa15_uniform.fits'
 #dataname = 'PDS70_robust-1.fits'
@@ -157,7 +162,7 @@ if (dataname ==  'PDS70_robust-1.fits'):
         dict(name='gauss_theta', value=160., min=0.1, max=180., vary=True),
         dict(name='gauss_i', value=10, min=0., max=90., vary=True)
         ]
-if (dataname == 'J1604_uniform-1.fits'):
+if (dataname == 'J1604_B7_robust_-2.0.fits'):
     param_list = [
         dict(name='gauss_bmaj', value=bmaj, vary=False),
         dict(name='gauss_bmin', value=bmin, vary=False),
@@ -169,7 +174,7 @@ if (dataname == 'J1604_uniform-1.fits'):
         dict(name='gauss_y0', value=0.5, min=-1, max=1, vary=True),
         dict(name='gauss_fwhm', value=0.2, min=0.01, max=2, vary=True),
         dict(name='gauss_theta', value=90., min=0.1, max=180., vary=True),
-        dict(name='gauss_i', value=45, min=0., max=90., vary=True)
+        dict(name='gauss_i', value=10, min=0., max=90., vary=True)
     ]
 
 if (dataname == 'LkCa15_uniform.fits'):
@@ -187,7 +192,27 @@ if (dataname == 'LkCa15_uniform.fits'):
         dict(name='gauss_i', value=49, min=0., max=90., vary=True)
     ]
 
-if (dataname == 'J1608_B6_robust.fits'):
+if (dataname == 'J1608_B3_robust2.fits'):
+
+
+    param_list = [
+        dict(name='gauss_bmaj', value=bmaj,  vary=False),
+        dict(name='gauss_bmin', value=bmin, vary=False),
+        dict(name='gauss_bpa', value=bpa, vary=False),
+        dict(name='gauss_pix_size', value=pix_size, vary=False),
+        dict(name='gauss_amp', value=0.17, min=1e-4, vary=True),
+        dict(name='gauss_r0', value=0.48, min=1e-3, max=1., vary=True),
+        dict(name='gauss_x0', value=-0.05, min=-1, max=1, vary=True),
+        dict(name='gauss_y0', value=0.07, min=-1, max=1, vary=True),
+        dict(name='gauss_fwhm', value=0.1, min=0.001, max=2, vary=True),
+        dict(name='gauss_theta', value=107., min=0.1, max=180., vary=True),
+        dict(name='gauss_i', value=72, min=0., max=90., vary=True)
+
+
+    ]
+
+
+if (dataname == 'J1608_B6_robust2.fits'):
 
 
     param_list = [
@@ -220,6 +245,22 @@ if (dataname == 'J1608_B7_robust.fits'):
         dict(name='gauss_fwhm', value=0.2, min=0.05, max=1.0, vary=True),
         dict(name='gauss_theta', value=108., min=0.1, max=180., vary=True),
         dict(name='gauss_i', value=72., min=0., max=90., vary=True)
+
+    ]
+
+if (dataname == 'J1604_B3_robust_-2.fits'):
+    param_list = [
+        dict(name='gauss_bmaj', value=bmaj, vary=False),
+        dict(name='gauss_bmin', value=bmin, vary=False),
+        dict(name='gauss_bpa', value=bpa, vary=False),
+        dict(name='gauss_pix_size', value=pix_size, vary=False),
+        dict(name='gauss_amp', value=0.01, min=1e-5, vary=True),
+        dict(name='gauss_r0', value=0.6, min=-1., max=1., vary=True),
+        dict(name='gauss_x0', value=0.6, min=-1.2, max=1.2, vary=True),
+        dict(name='gauss_y0', value=0.62, min=-1.2, max=1.2, vary=True),
+        dict(name='gauss_fwhm', value=2, min=0.05, max=3.0, vary=True),
+        dict(name='gauss_theta', value=90., min=0.1, max=180., vary=True),
+        dict(name='gauss_i', value=0, min=0., max=90., vary=True)
 
     ]
 
@@ -269,6 +310,8 @@ def ploting(dataname, data, result):
     colorbar(m)
     plt.subplot(1,3,3)
     m =plt.imshow(data - result.best_fit, origin="lower", cmap='viridis')
+    #plt.contour(result.best_fit[:], colors='w')
+
     plt.title("Residual")
     colorbar(m)
     plt.tight_layout()
